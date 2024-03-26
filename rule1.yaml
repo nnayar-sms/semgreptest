@@ -1,0 +1,7 @@
+rules:
+  - id: hello-id
+    languages:
+      - python
+    message: hello found message
+    pattern: print('Hello, World!')
+    severity: INFO

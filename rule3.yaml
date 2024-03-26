@@ -1,0 +1,11 @@
+rules:
+  - id: taint-labels
+    mode: taint
+    pattern-sources:
+      - pattern: user_input
+    pattern-sinks:
+      - pattern: sink(...)
+    message: Semgrep found a match
+    languages:
+      - python
+    severity: WARNING

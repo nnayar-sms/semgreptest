@@ -1,0 +1,13 @@
+rules:
+  - id: testrule
+    message: black < 24.4.0 is vulnerable to Inefficient Regular Expression Complexity.
+    r2c-internal-project-depends-on:
+      depends-on-either:
+        - namespace: pypi
+          package: black
+          version: ">=0, <24.4.0"
+    pattern-either:
+      - pattern: blackit(...)
+    languages:
+      - python
+    severity: WARNING
