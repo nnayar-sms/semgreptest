@@ -1,3 +1,6 @@
+def dirty_fn(m):
+    return m  # but m is now dirty
+
 user_input = 666
-xx = user_input
+xx = dirty_fn(user_input)
 

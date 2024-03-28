@@ -1,1 +1,18 @@
+venv
+.pycache
 __pycache__
+.vscode/
+.idea/
+.tox/
+k8s/vault/vault-full-manifest*.yaml
+.helmignore
+unseal_acceptance.txt
+unseal_prod.txt
+unseal_test.txt
+
+# Ignore VS Code
+.vscode
+Vagrantfile
+unseal*.txt
+
+k8s/vault/env/settings_tclag_de*.json

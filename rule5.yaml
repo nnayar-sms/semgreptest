@@ -1,0 +1,29 @@
+rules:
+  - id: print_dirty_for_me
+    message: Print dirty for me.
+    severity: ERROR
+    languages:
+      - python
+    mode: taint
+    options:
+      interfile: true
+      symbolic_propagation: true
+    pattern-sources:
+      - patterns:
+          - pattern-either:
+              - pattern: dirty_fn($ARGS)
+    pattern-sinks:
+      - pattern-either:
+          - patterns:
+              - pattern: print(...)
+    metadata:
+      category: security
+      subcategory:
+        - vuln
+      cwe:
+        - "CWE 5: J2EE Misconfiguration: Data Transmission Without Encryption"
+      confidence: HIGH
+      likelihood: HIGH
+      impact: HIGH
+      technology:
+        - python
