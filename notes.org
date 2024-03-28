@@ -127,3 +127,76 @@ CI scan completed successfully.
   No blocking findings so exiting with code 0
 
 ⏫  A new version of Semgrep is available. See https://semgrep.dev/docs/upgrading
+
+* updating to latest version of semgrep made the one finding go away
+
+$ semgrep ci
+
+
+┌────────────────┐
+│ Debugging Info │
+└────────────────┘
+
+  SCAN ENVIRONMENT
+  versions    - semgrep 1.66.2 on python 3.11.8
+  environment - running in environment git, triggering event is unknown
+
+  CONNECTION
+  Initializing scan (deployment=kasterma-net, scan_id=22540049)
+  Enabled products: Code, Supply Chain
+
+
+  ENGINE
+Semgrep Pro Engine will be installed in /opt/homebrew/Cellar/semgrep/1.66.2/libexec/lib/python3.11/site-packages/semgrep/bin/semgrep-core-proprietary
+Downloading... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.6/177.6 MB 17.9 MB/s 0:00:00
+
+Successfully installed Semgrep Pro Engine (version db580d5)!
+
+
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 12 files (only git-tracked) with 1785 Code rules, 2512 Supply Chain rules:
+
+  CODE RULES
+
+  Language      Rules   Files          Origin      Rules
+ ─────────────────────────────        ───────────────────
+  <multilang>      47      24          Community    1047
+  yaml             28       5          Pro rules     737
+  python          410       3          Custom          1
+
+
+  SUPPLY CHAIN RULES
+
+  Ecosystem   Rules   Files   Lockfiles
+ ─────────────────────────────────────────
+  Pypi         2512       8   poetry.lock
+
+
+  Analysis       Rules
+ ──────────────────────
+  Basic           2280
+  Reachability     232
+
+
+  PROGRESS
+
+Semgrep Pro Engine may be slower and show different results than Semgrep OSS.
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+
+
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+Some files were skipped or only partially analyzed.
+  Scan was limited to files tracked by git.
+
+CI scan completed successfully.
+  Found 0 findings (0 blocking) from 18893 rules.
+  Uploading scan results
+  Finalizing scan
+  View results in Semgrep Cloud Platform:
+    https://semgrep.dev/orgs/kasterma-net/findings?repo=local_scan/semgrep-test&ref=master
+    https://semgrep.dev/orgs/kasterma-net/supply-chain
+  No blocking findings so exiting with code 0
