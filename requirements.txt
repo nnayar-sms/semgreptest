@@ -1,1 +1,1 @@
-pymysql
+pymysql<1.1.0
